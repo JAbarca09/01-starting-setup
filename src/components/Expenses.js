@@ -5,9 +5,10 @@ function Expenses(props) {
   const expenses = props.expenses;
   return (
     <div className="expenses">
-      {expenses.map((element) => {
+      {expenses.map((element, idx) => {
         return (
           <ExpenseItem
+            key={"ExpenseItem" + idx}
             title={element.title}
             amount={element.amount}
             date={element.date}
