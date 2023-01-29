@@ -1,5 +1,5 @@
-import Expenses from "./components/Expenses";
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
+import ExpenseItem from "./components/Expenses/ExpenseItem";
 /*
 Assignment: Create a component that replaces ExpenseItem
 Expenses component that takes expenses as props
