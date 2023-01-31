@@ -1,5 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 import ExpenseItem from "./components/Expenses/ExpenseItem";
+import NewExpense from "./components/NewExpense/NewExpense";
 /*
 Assignment: Create a component that replaces ExpenseItem
 Expenses component that takes expenses as props
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       <Expenses expenses={expenses}/>
     </div>
   );
