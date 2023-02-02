@@ -6,7 +6,7 @@ Assignment: Create a component that replaces ExpenseItem
 Expenses component that takes expenses as props
 */
 
-function App() {
+function App(props) {
   //this code stays!
   const expenses = [
     {
@@ -30,9 +30,13 @@ function App() {
     },
   ];
 
+  const addExpenseHanlder = (expenseData) => {
+    console.log(expenseData);
+  }
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHanlder} />
       <Expenses expenses={expenses}/>
     </div>
   );
