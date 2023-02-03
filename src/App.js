@@ -1,9 +1,20 @@
 import Expenses from "./components/Expenses/Expenses";
-import ExpenseItem from "./components/Expenses/ExpenseItem";
 import NewExpense from "./components/NewExpense/NewExpense";
 /*
-Assignment: Create a component that replaces ExpenseItem
-Expenses component that takes expenses as props
+Assignment: Add a filter component
+listen to changes on the dropdown, whenever the user selects a new year and state
+listen to the event and then the picked year should be forwareded to the expenses component.
+
+The picked year should be forwarded to the expenses component, Expense filter should live there as well.
+Store the year in a state
+
+
+Listen for changes
+forward the changes to the Expense component
+save the year data to a state on Expenses Component
+
+
+data is being moved from child ExpensesFilter => to the parent Expenses
 */
 
 function App(props) {
