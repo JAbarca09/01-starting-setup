@@ -5,7 +5,7 @@ import ExpensesFilter from './ExpensesFilter';
 import Card from '../UI/Card';
 
 function Expenses(props) {
-  const [filterYear, setFilterYear] = useState("");
+  const [filterYear, setFilterYear] = useState("2022");
   const expenses = props.expenses;
 
   const selectYearHandler = (passedData) => {
