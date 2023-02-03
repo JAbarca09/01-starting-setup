@@ -15,7 +15,6 @@ function Expenses(props) {
   return (
     <Card className='expenses'>
       <ExpensesFilter onFilterYear={selectYearHandler} />
-      <div className="expenses">
         {expenses.map((element, idx) => {
           return (
             <ExpenseItem
@@ -26,7 +25,6 @@ function Expenses(props) {
             />
           );
         })}
-      </div>
     </Card>
   );
 }
