@@ -6,7 +6,6 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
-  const [showExpenseForm, setShowExpenseForm] = useState(false);
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: '',
   //   enteredAmount: '',
@@ -45,7 +44,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -53,20 +52,7 @@ const ExpenseForm = (props) => {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
-    setShowExpenseForm(false);
   };
-
-  const showExpenseHandler = () => {
-    setShowExpenseForm(true);
-  }
-
-  const cancelExpenseHandler = () => {
-    setShowExpenseForm(false);
-  }
-
-  if (showExpenseForm === false) {
-    return <button onClick={showExpenseHandler}>Add Expense</button>
-  }
 
   return (
     <form onSubmit={submitHandler}>
