@@ -13,7 +13,8 @@ const App = () => {
   const addGoalHandler = enteredText => {
     setCourseGoals(prevGoals => {
       const updatedGoals = [...prevGoals];
-      updatedGoals.unshift({ text: enteredText, id: 'goal1' });
+      updatedGoals.unshift({ text: enteredText, id: 'g' + (parseInt(updatedGoals.length) + 1)});
+      console.log(updatedGoals);
       return updatedGoals;
     });
   };
