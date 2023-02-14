@@ -3,8 +3,8 @@ import Users from './Components/Users';
 import './App.css';
 
 const DUMMY_USERS = [
-  {"Username": "Jesse", "Age" : "19"},
-  {"Username": "Abraham", "Age" : "21"}
+  {"Username": "Jesse", "Age" : "19", "key": "User1"},
+  {"Username": "Abraham", "Age" : "21", "key": "User2"}
 ]
 
 function App() {
