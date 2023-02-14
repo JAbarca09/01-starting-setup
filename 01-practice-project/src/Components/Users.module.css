@@ -1,0 +1,33 @@
+.BackgroundForUsersComponent {
+    background-color: white;
+    width: 50%;
+    border-radius: 15px;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+.ParentDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.user {
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    border-style: solid;
+    border-color: rgb(200, 198, 198);
+    border-width: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.ParentUserPadding {
+    padding-left: 25px;
+    padding-right: 25px;
+}
