@@ -26,3 +26,7 @@ form {
     width: 100%;
     height: 25px;
 }
+
+#firstInputField {
+    margin-bottom: 10px;
+}

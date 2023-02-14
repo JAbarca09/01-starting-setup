@@ -7,7 +7,7 @@ const InputForm = () => {
       <form>
         <div className={styles.FormContentsDiv}>
           <h2 className={styles.smallerH2}>Username</h2>
-          <input className={styles.inputField} type="text" />
+          <input className={styles.inputField} id={styles.firstInputField} type="text" />
           <h2 className={styles.smallerH2}>Age (Years)</h2>
           <input className={styles.inputField} type="number" />
         </div>
