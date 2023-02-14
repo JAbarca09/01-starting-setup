@@ -1,3 +1,13 @@
 body {
   background-color: black;
 }
+
+.InputFormButton {
+  background-color: rgb(85, 1, 85);
+  color: white;
+  font-size: 20px;
+  width: 150px;
+  height: 35px;
+  border: 0; 
+  margin-top: 10px;
+}

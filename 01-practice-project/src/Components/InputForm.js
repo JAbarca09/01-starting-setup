@@ -30,7 +30,7 @@ const InputForm = () => {
           />
           <h2 className={styles.smallerH2}>Age (Years)</h2>
           <input className={styles.inputField} type="number" onChange={userAgeHandler} />
-          <button type="submit">Add User</button>
+          <button className="InputFormButton" type="submit">Add User</button>
         </div>
       </form>
     </div>
