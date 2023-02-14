@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./InputForm.module.css";
 
-const InputForm = () => {
+const InputForm = (props) => {
   const [userName, setUserName] = useState("");
   const [userAge, setUserAge] = useState("");
 
@@ -15,6 +15,13 @@ const InputForm = () => {
 
   const addUser = (e) => {
     e.preventDefault();
+    let user = {
+      "Username": userName,
+      "Age": userAge,
+      "key": "",
+    }
+
+    props.onSaveUser(user);
   };
 
   return (
