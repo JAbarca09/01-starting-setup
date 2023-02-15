@@ -13,6 +13,7 @@ const DUMMY_USERS = [
 function App(props) {
 
   const [usersArr, setUsersArr] = useState(DUMMY_USERS);
+  const [showModal, setShowModal] = useState(true);
 
   const saveUserHandler = (userData) => {
     //add the user to the array
@@ -28,7 +29,9 @@ function App(props) {
       <InputForm onSaveUser={saveUserHandler} />
       {/* Your going to recieve props from the InputForm component for new users! */}
       <Users usersArr={usersArr} />
-      <ErrorModal />
+      {
+        showModal && <ErrorModal />
+      }
     </div>
   );
 }
