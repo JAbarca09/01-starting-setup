@@ -29,7 +29,7 @@ const InputForm = (props) => {
     } else if (userAge < 1) {
       props.onErrorModalMessage("Please enter a valid user age!");
       props.onTurnErrorModalOn(true);
-    } else if(/[0-9]/.test(userName)){
+    } else if(!/^[A-Za-z\s]+$/.test(userName)){
       props.onErrorModalMessage("Please enter a valid username!");
       props.onTurnErrorModalOn(true);
     } 
