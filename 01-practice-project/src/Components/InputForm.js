@@ -24,9 +24,14 @@ const InputForm = (props) => {
     //conduct error handling here
 
     //When there are no form errors run the below code
-    props.onSaveUser(user);
-    setUserName("");
-    setUserAge("");
+    if(userAge < 0){
+      props.onTurnErrorModalOn(true);
+    } else {
+      props.onSaveUser(user);
+      setUserName("");
+      setUserAge("");
+    }
+
   };
 
   return (

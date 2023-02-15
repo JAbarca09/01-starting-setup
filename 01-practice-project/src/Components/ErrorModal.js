@@ -12,7 +12,7 @@ const ErrorModal = (props) => {
               Please enter a valid name and age (non-empty values).
             </p>
             <div className={styles.ModalButtonWraper}>
-              <button className="InputFormButton">Okay</button>
+              <button onClick={props.onErrorModalTrigger} className="InputFormButton">Okay</button>
             </div>
           </div>
         </div>

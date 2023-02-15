@@ -11,6 +11,10 @@ body {
   padding: 8px 15px;
 }
 
+.InputFormButton:hover {
+  cursor: pointer;
+}
+
 .smallerH2 {
   margin-top: 0px;
   margin-bottom: 8px;

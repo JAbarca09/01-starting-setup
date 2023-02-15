@@ -13,7 +13,7 @@ const DUMMY_USERS = [
 function App(props) {
 
   const [usersArr, setUsersArr] = useState(DUMMY_USERS);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false); //should be false on start
 
   const saveUserHandler = (userData) => {
     //add the user to the array
@@ -24,13 +24,21 @@ function App(props) {
     })
   }
 
+  const ErrorModalTriggerHandler = (triggerState) => {
+    setShowModal(triggerState);
+  }
+
+  const switchOffErrorModal = () => {
+    setShowModal((triggerState) => !triggerState);
+  }
+
   return (
     <div className="bgBlack">
-      <InputForm onSaveUser={saveUserHandler} />
+      <InputForm onTurnErrorModalOn={ErrorModalTriggerHandler} onSaveUser={saveUserHandler} />
       {/* Your going to recieve props from the InputForm component for new users! */}
       <Users usersArr={usersArr} />
       {
-        showModal && <ErrorModal />
+        showModal && <ErrorModal onErrorModalTrigger={switchOffErrorModal} />
       }
     </div>
   );
