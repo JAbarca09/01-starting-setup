@@ -21,7 +21,12 @@ const InputForm = (props) => {
       "key": "",
     }
 
+    //conduct error handling here
+
+    //When there are no form errors run the below code
     props.onSaveUser(user);
+    setUserName("");
+    setUserAge("");
   };
 
   return (
@@ -34,9 +39,10 @@ const InputForm = (props) => {
             id={styles.firstInputField}
             type="text"
             onChange={userNameHandler}
+            value={userName}
           />
           <h2 className={styles.smallerH2}>Age (Years)</h2>
-          <input className={styles.inputField} type="number" onChange={userAgeHandler} />
+          <input className={styles.inputField} type="number" onChange={userAgeHandler} value={userAge} />
           <button className="InputFormButton" type="submit">Add User</button>
         </div>
       </form>
