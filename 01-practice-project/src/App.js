@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import InputForm from './Components/InputForm';
 import Users from './Components/Users';
+import ErrorModal from './Components/ErrorModal';
+
 import './App.css';
 
 const DUMMY_USERS = [
@@ -26,6 +28,7 @@ function App(props) {
       <InputForm onSaveUser={saveUserHandler} />
       {/* Your going to recieve props from the InputForm component for new users! */}
       <Users usersArr={usersArr} />
+      <ErrorModal />
     </div>
   );
 }

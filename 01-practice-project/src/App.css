@@ -8,5 +8,15 @@ body {
   font-size: 20px;
   border: 0; 
   margin-top: 10px;
-  padding: 8px 10px;
+  padding: 8px 15px;
+}
+
+.smallerH2 {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.ContentsDivPadding {
+  padding-left: 30px;
+  padding-right: 30px;
 }

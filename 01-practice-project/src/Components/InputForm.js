@@ -32,8 +32,8 @@ const InputForm = (props) => {
   return (
     <div className={styles.FormParentDiv}>
       <form onSubmit={addUser}>
-        <div className={styles.FormContentsDiv}>
-          <h2 className={styles.smallerH2}>Username</h2>
+        <div className="ContentsDivPadding">
+          <h2 className="smallerH2">Username</h2>
           <input
             className={styles.inputField}
             id={styles.firstInputField}
@@ -41,7 +41,7 @@ const InputForm = (props) => {
             onChange={userNameHandler}
             value={userName}
           />
-          <h2 className={styles.smallerH2}>Age (Years)</h2>
+          <h2 className="smallerH2">Age (Years)</h2>
           <input className={styles.inputField} type="number" onChange={userAgeHandler} value={userAge} />
           <button className="InputFormButton" type="submit">Add User</button>
         </div>
