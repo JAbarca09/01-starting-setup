@@ -14,6 +14,7 @@ function App(props) {
 
   const [usersArr, setUsersArr] = useState(DUMMY_USERS);
   const [showModal, setShowModal] = useState(false); //should be false on start
+  const [errorMessage, setErrorMessage] = useState("");
 
   const saveUserHandler = (userData) => {
     //add the user to the array
@@ -24,21 +25,25 @@ function App(props) {
     })
   }
 
-  const ErrorModalTriggerHandler = (triggerState) => {
-    setShowModal(triggerState);
+  const switchOnErrorModal = (triggerState) => {
+    setShowModal(triggerState); //turns the error modal on
   }
 
   const switchOffErrorModal = () => {
-    setShowModal((triggerState) => !triggerState);
+    setShowModal((triggerState) => !triggerState); //on off switch
+  }
+
+  const setErrorModalMessage = (errorMessage) => {
+    setErrorMessage(errorMessage);
   }
 
   return (
     <div className="bgBlack">
-      <InputForm onTurnErrorModalOn={ErrorModalTriggerHandler} onSaveUser={saveUserHandler} />
+      <InputForm onErrorModalMessage={setErrorModalMessage} onTurnErrorModalOn={switchOnErrorModal} onSaveUser={saveUserHandler} />
       {/* Your going to recieve props from the InputForm component for new users! */}
       <Users usersArr={usersArr} />
       {
-        showModal && <ErrorModal onErrorModalTrigger={switchOffErrorModal} />
+        showModal && <ErrorModal onSaveErrorMessage={errorMessage} onErrorModalTrigger={switchOffErrorModal} />
       }
     </div>
   );

@@ -16,17 +16,20 @@ const InputForm = (props) => {
   const addUser = (e) => {
     e.preventDefault();
     let user = {
-      "Username": userName,
-      "Age": userAge,
+      "Username": userName.trim(),
+      "Age": userAge.trim(),
       "key": "",
     }
 
     //conduct error handling here
-
-    //When there are no form errors run the below code
-    if(userAge < 0){
+    if(userName.trim().length < 1 || userAge.trim().length < 1){
+      props.onErrorModalMessage("Please enter a valid name and age (non-empty values).");
+      props.onTurnErrorModalOn(true);
+    } else if(userAge < 1){
+      props.onErrorModalMessage("Please enter a valid user age!")
       props.onTurnErrorModalOn(true);
     } else {
+      //When there are no form errors run the below code
       props.onSaveUser(user);
       setUserName("");
       setUserAge("");
