@@ -20,7 +20,6 @@ function App(props) {
     //add the user to the array
     setUsersArr((userArr) => {
       userData.key = userArr.length + 1;
-      console.log(userData)
       return [userData, ...userArr];
     })
   }

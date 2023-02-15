@@ -22,13 +22,18 @@ const InputForm = (props) => {
     }
 
     //conduct error handling here
-    if(userName.trim().length < 1 || userAge.trim().length < 1){
+    //*Check for letters in the name using regex
+    if (userName.trim().length < 1 || userAge.trim().length < 1) {
       props.onErrorModalMessage("Please enter a valid name and age (non-empty values).");
       props.onTurnErrorModalOn(true);
-    } else if(userAge < 1){
-      props.onErrorModalMessage("Please enter a valid user age!")
+    } else if (userAge < 1) {
+      props.onErrorModalMessage("Please enter a valid user age!");
       props.onTurnErrorModalOn(true);
-    } else {
+    } else if(/[0-9]/.test(userName)){
+      props.onErrorModalMessage("Please enter a valid username!");
+      props.onTurnErrorModalOn(true);
+    } 
+    else {
       //When there are no form errors run the below code
       props.onSaveUser(user);
       setUserName("");
