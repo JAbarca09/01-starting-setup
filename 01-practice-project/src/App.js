@@ -5,14 +5,9 @@ import ErrorModal from './Components/ErrorModal';
 
 import './App.css';
 
-const DUMMY_USERS = [
-  {"Username": "Jesse", "Age" : "19", "key": "User1"},
-  {"Username": "Abraham", "Age" : "21", "key": "User2"}
-]
+const App = () => {
 
-function App(props) {
-
-  const [usersArr, setUsersArr] = useState(DUMMY_USERS);
+  const [usersArr, setUsersArr] = useState([]);
   const [showModal, setShowModal] = useState(false); //should be false on start
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -39,7 +34,6 @@ function App(props) {
   return (
     <div className="bgBlack">
       <InputForm onErrorModalMessage={setErrorModalMessage} onTurnErrorModalOn={switchOnErrorModal} onSaveUser={saveUserHandler} />
-      {/* Your going to recieve props from the InputForm component for new users! */}
       <Users usersArr={usersArr} />
       {
         showModal && <ErrorModal onSaveErrorMessage={errorMessage} onErrorModalTrigger={switchOffErrorModal} />
