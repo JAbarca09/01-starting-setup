@@ -26,12 +26,3 @@ const Users = (props) => {
 };
 
 export default Users;
-
-{/* usersArr.map(user => {
-            
-            return (
-            <div className={styles.ParentUserPadding}>
-                <p key={user.key} className={styles.user}>{user.Username} ({user.Age} Years Old)</p>
-            </div>
-            )
-        })) */}
