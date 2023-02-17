@@ -2,8 +2,15 @@ import React from "react";
 import styles from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
+
+    const BackDropModalHandler = (e) => {
+        if(e.target.className === styles.modal){
+            props.onErrorModalTrigger();
+        }
+    }
+
     return (
-        <div className={styles.modal}>
+        <div onClick={BackDropModalHandler} className={styles.modal}>
             <div className={styles["modal-content"]}>
                 <div className={styles.headerModalBackground}>
                     <div className="ContentsDivPadding">
