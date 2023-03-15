@@ -12,7 +12,15 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        setMovies(data.results);
+        const transformedMovies = data.results.map((movieData) => {
+          return {
+            id: movieData.episode_id,
+            title: movieData.title,
+            releaseDate: movieData.release_date,
+            openingText: movieData.opening_crawl,
+          };
+        });
+        setMovies(transformedMovies);
       });
   };
   return (
