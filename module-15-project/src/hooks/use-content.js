@@ -7,8 +7,9 @@ const useContent = (forwards = true) => {
     const interval = setInterval(() => {
       if (forwards) {
         setCounter((prevCounter) => prevCounter + 1);
+      } else {
+        setCounter((prevCounter) => prevCounter - 1);
       }
-      setCounter((prevCounter) => prevCounter - 1);
     }, 1000);
 
     return () => clearInterval(interval);
