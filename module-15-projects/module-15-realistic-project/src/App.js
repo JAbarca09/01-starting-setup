@@ -22,11 +22,11 @@ function App() {
     isLoading,
     error,
     sendRequest: fetchTasks,
-  } = useHttp({ url: FIRE_BASE_URL }, transformTasks);
+  } = useHttp(transformTasks);
 
   useEffect(() => {
-    fetchTasks();
-  }, []);
+    fetchTasks({ url: FIRE_BASE_URL }, transformTasks);
+  }, [fetchTasks]);
 
   const taskAddHandler = (task) => {
     setTasks((prevTasks) => prevTasks.concat(task));
