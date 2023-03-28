@@ -1,5 +1,9 @@
 import { useState, useCallback } from "react";
 
+
+/*
+  This custom hook was created for the HTTP request duplicate code that was located in NewTask.js and App.js
+*/
 const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
