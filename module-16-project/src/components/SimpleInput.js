@@ -38,7 +38,7 @@ const SimpleInput = (props) => {
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   
     // use test method of regex to check if email matches pattern
-    return pattern.test(email);
+    return pattern.test(email.trim());
   };
 
   const formSubmissionHandler = event => {
