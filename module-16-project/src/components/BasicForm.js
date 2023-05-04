@@ -53,6 +53,12 @@ const BasicForm = (props) => {
     event.preventDefault();
 
     // If the form is valid then reset all the values
+    if(!formIsValid) {
+      return;
+    }
+    console.log('Submitted!');
+    console.log(enteredFirstName, enteredLastName, enteredEmail);
+
     resetFirstName();
     resetLastName();
     resetEmail();
